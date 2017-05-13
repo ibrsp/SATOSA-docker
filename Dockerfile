@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         wget \
         ca-certificates
 
-ENV SATOSA_SRC_URL=https://github.com/ibrsp/SATOSA/archive/master.tar.gz
+ENV SATOSA_SRC_URL=https://github.com/ibrsp/SATOSA/archive/signature_digest_configuration.tar.gz
 
 WORKDIR /tmp
 
