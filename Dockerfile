@@ -24,7 +24,7 @@ RUN wget https://bootstrap.pypa.io/get-pip.py \
     && rm -f satosa.tar.gz \
     && pip install ./satosa \
     && pip install ldap3 \
-    && pip install --upgrade https://github.com/rohe/pysaml2/archive/8aa80e9e67f76ef230cb377dfe8b2050fc1f82bf.tar.gz \
+    && pip install --upgrade https://github.com/ibrsp/pysaml2/archive/name_id_format_none.tar.gz \
     && rm -rf satosa
 
 COPY start.sh /usr/local/sbin/satosa-start.sh
