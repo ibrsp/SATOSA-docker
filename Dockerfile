@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         wget \
         ca-certificates
 
-ENV SATOSA_SRC_URL=https://github.com/ibrsp/SATOSA/archive/signature_digest_configuration.tar.gz
+ENV SATOSA_SRC_URL=https://github.com/ibrsp/SATOSA/archive/master.tar.gz
 
 WORKDIR /tmp
 
@@ -24,7 +24,7 @@ RUN wget https://bootstrap.pypa.io/get-pip.py \
     && rm -f satosa.tar.gz \
     && pip install ./satosa \
     && pip install ldap3 \
-    && pip install --upgrade https://github.com/ibrsp/pysaml2/archive/name_id_format_none.tar.gz \
+    && pip install --upgrade https://github.com/ibrsp/pysaml2/archive/master.tar.gz \
     && rm -rf satosa
 
 COPY start.sh /usr/local/sbin/satosa-start.sh
